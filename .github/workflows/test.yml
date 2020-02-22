@@ -1,0 +1,9 @@
+on: push
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - run: pip3 install PyGithub
+      - run: python3 x.py
+        env:
+          TOKEN: ${{ secrets.GITHUB_TOKEN }}
